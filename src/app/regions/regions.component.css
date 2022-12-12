@@ -1,0 +1,33 @@
+
+.container{
+width: 90%;
+  display: flex;
+  padding-left: 10%;
+  align-items: center;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "c1 c2 c3"
+  grid-gap: 10px;
+  ; */
+}
+.container .c1 img{ 
+  width: 100%;
+}
+.container .c1{ 
+  margin-right: 20px;
+  width: 30%;
+  grid-area: c1;
+  background-color: #a78989;
+}
+
+.container .c1 p{ 
+padding-left: 20px;
+font-size: 20px;
+}
+
+.container .c1 .btn{ 
+  height: 40px;
+  width: 40%;
+  color: #fff;
+background-color: rgb(227, 112, 30);
+}

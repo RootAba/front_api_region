@@ -72,14 +72,14 @@
       border-top: 3px solid #eee;
     }
     .navbar .nav-btn label:hover, .navbar #nav-check:checked ~ .nav-btn label {
-      background-color: rgb(9, 14, 90);
+      background-color: rgb(90, 62, 9);
     }
     .navbar .nav-links{
       position: absolute;
       display: block;
       text-align: center;
       width: 50%;
-      background-color: rgb(9, 14, 90);
+      background-color: rgb(144, 94, 13);
       transition: all 0.3s ease-in;
       overflow-y: hidden;
       top: 70px;
@@ -102,21 +102,13 @@
     .navbar .nav-links .loginBtn {
       padding: 10px 40px ;
       margin: 20px;
-      font-size:  18px;
+      font-size:  30px;
       font-weight: bold;
       color: rgb(9, 14, 90);
     }
      
    
   }
+ 
 
-.visite{
-    display: grid;
-    grid-template-columns: 1fr;
-   
-}
-
-.visite .textvisite{
-    padding-left: 20px;
-}
 
