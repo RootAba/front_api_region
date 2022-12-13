@@ -67,3 +67,50 @@ background-color: rgb(227, 112, 30);
   height: 50px;
   border-radius: 0 25px 25px 0 ;
 }
+
+
+.mere{
+  display: flex;
+  height: 400px;
+  padding: 20px;
+}
+.vsite{
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+ .lesplusvisites{
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+ }
+.visite{
+  justify-content: center;
+  width:100%;
+  display: flex;
+  padding: 30px;
+  box-shadow: 10px 5px 5px rgb(222, 83, 83);
+}
+.visite img{
+  height: 300px;
+  width: 300px;
+}
+.visite .textvisite{
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.visite .textvisite p{
+ font-size: 20px;
+}
+
+ .contain{
+  position: relative;
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+   flex-wrap: wrap;
+
+ }
+ 
