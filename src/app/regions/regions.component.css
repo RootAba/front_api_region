@@ -31,3 +31,62 @@ font-size: 20px;
   color: #fff;
 background-color: rgb(227, 112, 30);
 }
+
+
+.contain{
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-gap: 1.5rem;
+
+ }
+ .contain .one{
+  background-color: #D9D9D9;
+  
+ }
+ .contain .two{
+  background-color: #ccc917;
+ }
+ 
+ .contain .three{
+  background-color: #5d5c04;
+ }
+
+ .contain .two h1{
+  text-align: CENTER;
+   }
+   .contain .one h1{
+    text-align: CENTER;
+     }
+     .contain .three h1{
+      text-align: CENTER;
+       }
+       .btn{ 
+        height: 40px;
+        width: 40%;
+        color: #fff;
+      background-color: rgb(227, 112, 30);  
+       }    
+
+
+       .box{
+        padding-top: 40px;
+        padding-left: 30%;
+      
+      
+      }
+      .box input{
+        display: inline-block;
+        
+      }
+      .box input[type="text"]{
+        width: 400px;
+        height: 50px;
+        border-radius: 25px 0 0 25px;
+      }
+      .box input[type="submit"]{
+        background-color: #5d5c04;
+        width: 200px;
+        height: 50px;
+        border-radius: 0 25px 25px 0 ;
+      }

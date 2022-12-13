@@ -1,0 +1,51 @@
+
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr ;
+   grid-gap: 1.5rem;
+   width: 100%;
+}
+.container .haut{
+
+background-color: rgb(255, 253, 253);
+margin-bottom: 20px;
+margin-top: 20px;
+}
+
+.container .haut .image{
+ 
+  height: 100%;
+  width: 100%;
+ 
+
+}
+.container .haut .image img {
+height: 100%;
+width: 100%;
+  }
+
+.container .milieu{
+  background-color: rgb(250, 246, 246);
+ 
+  }
+
+  
+  .container .bas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgb(241, 169, 169);
+    margin-bottom: 20px;
+    }
+
+    .container .bas .imguser{ 
+      padding-left: 20px;
+      padding-top: 5px;
+width: 100px;
+    }
+
+    .container .bas .imguser img{ 
+     width: 100%;
+     border-radius: 50%;
+          }
+

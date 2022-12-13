@@ -1,6 +1,7 @@
 .visite{
   display: block;
   width: fit-content;
+  
 }
 .image img{
     height: 30%;
@@ -11,6 +12,9 @@
 .textvisite{
   font-size:  30px;
  padding-left: 10px;
+}
+.lesplusvisites{
+  padding-top: 40px;
 }
 
 .container{
@@ -67,3 +71,153 @@ background-color: rgb(227, 112, 30);
   height: 50px;
   border-radius: 0 25px 25px 0 ;
 }
+
+
+.mere{
+  /*display: flex;
+  height: 400px;
+  padding: 20px;*/
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.vsite{
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+
+.visite{
+  justify-content: center;
+  width:100%;
+  display: flex;
+  padding: 30px;
+ width: 800px;
+  box-shadow: 10px 5px 5px rgb(222, 83, 83);
+}
+.visite img{
+  height: 300px;
+  width: 300px;
+}
+.visite .textvisite{
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.visite .textvisite p{
+ font-size: 20px;
+}
+
+ 
+
+ .contain{
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-gap: 1.5rem;
+
+ }
+ .contain .one{
+  background-color: #f6f3f3;
+  
+ }
+ .contain .two{
+  background-color: #fcfcf8;
+ }
+ 
+ .contain .three{
+  background-color: #f4f3f2;
+ }
+
+ .contain .two h1{
+  text-align: CENTER;
+   }
+   .contain .one h1{
+    text-align: CENTER;
+     }
+     .contain .three h1{
+      text-align: CENTER;
+       }
+       .btn{ 
+        height: 40px;
+        width: 40%;
+        color: #fff;
+      background-color: rgb(227, 112, 30);  
+       }    
+
+       @media(max-width:900px){
+        .box{
+          display: inline-block;
+        }
+        .box input[type="text"]{
+          width: 300px;
+          height: 50px;
+          border-radius: 25px 0 0 25px;
+        }
+        .box input[type="submit"]{
+          background-color: #5d5c04;
+          width: 100px;
+          height: 50px;
+          border-radius: 0 25px 25px 0 ;
+        }
+    
+        .mere{
+          display: grid;
+         grid-template-columns: 1fr;
+         width: 100%;
+        }
+          .visite{
+            width: 100%;
+          }
+          .visite img{
+            height: 100%;
+            width: 200px;
+          }
+        .contain{
+          padding: 20px;
+          display: grid;
+          grid-template-columns: 1fr ;
+          grid-gap: 1.5rem;
+          width: 100%;
+        
+         }
+         .contain .one img{
+          width: 100%;
+         }
+         .contain .two img{
+          width: 100%;
+         }
+         .contain .three img{
+          width: 100%;
+         }
+       }
+
+       @media(max-width:600px) {
+        .mere{
+          display: grid;
+         grid-template-columns: 1fr;
+         width: 100%;
+        }
+          .visite{
+            display: grid;
+            grid-template-columns: 1fr;
+            width: 100%;
+          }
+          .visite img{
+            height: 100%;
+           
+          }
+
+          .box input[type="text"]{
+            width: 100px;
+            height: 30px;
+            border-radius: 25px 0 0 25px;
+          }
+          .box input[type="submit"]{
+            background-color: #5d5c04;
+            width: 75px;
+            height: 30px;
+            border-radius: 0 25px 25px 0 ;
+          }
+
+       }
