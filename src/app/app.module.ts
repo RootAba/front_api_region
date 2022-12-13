@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { RegionsComponent } from './regions/regions.component';
+import { VisiteComponent } from './visite/visite.component';
+import { DetailregionComponent } from './detailregion/detailregion.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccueilComponent,
-    RegionsComponent
+    RegionsComponent,
+    VisiteComponent,
+    DetailregionComponent
   ],
   imports: [
     BrowserModule,
