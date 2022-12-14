@@ -7,6 +7,8 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { RegionsComponent } from './regions/regions.component';
 import { VisiteComponent } from './visite/visite.component';
 import { DetailregionComponent } from './detailregion/detailregion.component';
+import { LoginComponent } from './login/login.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { DetailregionComponent } from './detailregion/detailregion.component';
     AccueilComponent,
     RegionsComponent,
     VisiteComponent,
-    DetailregionComponent
+    DetailregionComponent,
+    LoginComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,

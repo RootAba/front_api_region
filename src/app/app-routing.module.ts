@@ -3,18 +3,35 @@ import { RouterModule, Routes } from '@angular/router';
 import { AccueilComponent } from './accueil/accueil.component';
 import { RegionsComponent } from './regions/regions.component';
 import{VisiteComponent} from './visite/visite.component';
-import{DetailregionComponent} from './detailregion/detailregion.component'
+import{DetailregionComponent} from './detailregion/detailregion.component';
+import{LoginComponent} from './login/login.component';
+import{RegistrationComponent} from './registration/registration.component'
+
 const routes: Routes = [
 
   {
     path:"",
-    redirectTo:"acceuil",
+    redirectTo:"registration",
     pathMatch:'full'
   },  
+  {
+    path:"registration",
+    component:RegistrationComponent
+  },
+  {
+    path:"login",
+    component:LoginComponent
+  },
+
+  {
+    path:"registration",
+    component:RegistrationComponent
+  },
   {
     path:"acceuil",
     component:AccueilComponent
   },
+ 
   {
     path:"region",
     component:RegionsComponent
