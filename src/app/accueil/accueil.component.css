@@ -74,11 +74,10 @@ background-color: rgb(227, 112, 30);
 
 
 .mere{
-  /*display: flex;
-  height: 400px;
-  padding: 20px;*/
+  
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 1.em;
 }
 .vsite{
   padding-left: 20px;
