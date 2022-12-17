@@ -17,8 +17,8 @@ export class AccueilComponent {
   ngOnInit() {
   
     this.regionService.afficherRegion().subscribe(data=>{
-         this.afficher = data.data;
-         console.log(data);
+         this.afficher = data;
+         console.log("Afficher region "+ this.afficher );
     });
    
   }

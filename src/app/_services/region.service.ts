@@ -12,7 +12,7 @@ export class RegionService {
 
   afficherRegion(): Observable<any> {
     const data:FormData=new FormData();
-    return this.http.post(API_URL + 'afficher',data);
+    return this.http.get(API_URL + 'afficher');
   }
 
   ajouterRegion(file:any,activite:any): Observable<any>{

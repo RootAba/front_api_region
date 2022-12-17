@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AccueilComponent } from './accueil/accueil.component';
@@ -14,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { httpInterceptorProviders } from './_helpers/http.interceptor';
 import { ProfilComponent } from './profil/profil.component';
 import { AjoutRegionComponent } from './ajout-region/ajout-region.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -25,14 +25,18 @@ import { AjoutRegionComponent } from './ajout-region/ajout-region.component';
     LoginComponent,
     RegistrationComponent,
     ProfilComponent,
-    AjoutRegionComponent
+    AjoutRegionComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
+    // ,
+    RouterModule,
   ],
-  providers: [],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

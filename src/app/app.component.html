@@ -24,7 +24,7 @@
     <a routerLink="/acceuil" routerLinkActive="active">Accueil</a>
     <a routerLink="/visite" routerLinkActive="active">Temoignages</a>
     <a routerLink="/region" routerLinkActive="active">Regions</a>
-    <a routerLink="/region" routerLinkActive="active" *ngIf="showAdminBoard">Ajouter</a>
+    <a routerLink="/ajoutregion" routerLinkActive="active" *ngIf="showAdminBoard">Ajouter</a>
     <a href class="#" (click)="logout()">LogOut</a>
     <a href="#">Pays</a>
   
@@ -32,6 +32,7 @@
   </div>
  
 </div>
+
 
 <div class="router">
   <router-outlet></router-outlet>

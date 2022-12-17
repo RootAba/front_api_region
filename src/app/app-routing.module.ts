@@ -5,23 +5,25 @@ import { RegionsComponent } from './regions/regions.component';
 import{VisiteComponent} from './visite/visite.component';
 import{DetailregionComponent} from './detailregion/detailregion.component';
 import{LoginComponent} from './login/login.component';
-import{RegistrationComponent} from './registration/registration.component'
+import{RegistrationComponent} from './registration/registration.component';
+import{AjoutRegionComponent} from './ajout-region/ajout-region.component'
 
 const routes: Routes = [
 
   {
     path:"",
-    redirectTo:"registration",
+    redirectTo:"login",
     pathMatch:'full'
   },  
-  {
-    path:"registration",
-    component:RegistrationComponent
-  },
   {
     path:"login",
     component:LoginComponent
   },
+  {
+    path:"registration",
+    component:RegistrationComponent
+  },
+ 
 
   {
     path:"registration",
@@ -45,6 +47,10 @@ const routes: Routes = [
     path:"detailregion",
     component:DetailregionComponent
   },
+  {
+    path:"ajoutregion",
+    component:AjoutRegionComponent
+  }
   
 ];
 
