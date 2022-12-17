@@ -24,6 +24,8 @@
     <a routerLink="/acceuil" routerLinkActive="active">Accueil</a>
     <a routerLink="/visite" routerLinkActive="active">Temoignages</a>
     <a routerLink="/region" routerLinkActive="active">Regions</a>
+    <a routerLink="/region" routerLinkActive="active" *ngIf="showAdminBoard">Ajouter</a>
+    <a href class="#" (click)="logout()">LogOut</a>
     <a href="#">Pays</a>
   
     <button class="loginBtn">Login</button>

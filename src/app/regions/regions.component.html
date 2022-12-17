@@ -8,22 +8,31 @@
 
 
 <div id="content">
-  <h1>Les régions du MALI</h1>
-  <div class="containe">
+
+
+
+
+  
+  <div class="containe" *ngFor= "let region of  afficher ">
     <div class="flipper">
       <div class="front">
-        <img src="assets/kayes.jpg"  alt="cherry blossoms">
-        <p class="caption">Kayes</p>
+        <img src={{region.image}}  alt="cherry blossoms">
+        <p class="caption">{{region.nomRegion}}</p>
       </div>
       <div class="back">
-        <a routerLink="/detailregion" routerLinkActive="active">
-          <h1>Kayes</h1>
+        <a routerLink="/region" routerLinkActive="active">
+          <h1>{{region.nomRegion}}</h1>
         </a>
-        <p class="date">Pays :MALI</p>
-        <p class="description">A cherry blossom is the flower of any of several trees of genus Prunus, particularly the Japanese cherry, Prunus serrulata, which is called sakura after the Japanese.</p>
+        <p class="date">Pays : MALI</p>
+        <p class="description"> Superficie : {{region.superficie}}</p>
+        <p class="description">Domaine : {{region.domaine}}</p>
       </div>
     </div>
   </div>
+
+
+
+
   <div class="containe">
     <div class="flipper">
       <div class="front">

@@ -10,12 +10,12 @@
      took a galley of type and scrambled it to make a type specimen book. It has survived not    </div>
 </div>
 
+<!--Nous avons la possibilite de recuperer l'image de la region avec site.region.image -->
 <div class="container" style="width:100%;">
-        <div class="cont1">
-          <img src="assets/fatma.jpg"  alt="">
-          <H2>Nom du site</H2>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-            has been </p>
+        <div class="cont1" *ngFor= "let site of  afficherSite ">
+          <img src={{site.imagesite}}  alt="">
+          <H2>{{site.nomsite}}</H2>
+          <p>{{site.description}} </p>
         </div>
         <div class="cont1">
           <img src="assets/fatma.jpg"  alt="">
@@ -36,6 +36,15 @@
             has been </p>
         </div>
 </div>
+<!-- Formulaire d'ajout de commentaire -->
+<form>
+  <div class="form-group">
+    <label for="commentInput">Comment</label>
+    <textarea class="form-control" id="commentInput" rows="3"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
 <style>
 .container{
 

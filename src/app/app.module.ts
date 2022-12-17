@@ -9,6 +9,11 @@ import { VisiteComponent } from './visite/visite.component';
 import { DetailregionComponent } from './detailregion/detailregion.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { httpInterceptorProviders } from './_helpers/http.interceptor';
+import { ProfilComponent } from './profil/profil.component';
+import { AjoutRegionComponent } from './ajout-region/ajout-region.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +23,14 @@ import { RegistrationComponent } from './registration/registration.component';
     VisiteComponent,
     DetailregionComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    ProfilComponent,
+    AjoutRegionComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
