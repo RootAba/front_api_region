@@ -19,13 +19,21 @@ export class RegionsComponent {
   ngOnInit() {
   
     this.regionService.afficherRegion().subscribe(data=>{
-         this.afficher = data.data;
+         this.afficher = data;
          console.log(data);
     });
     this.route.paramMap.subscribe(params => {
       const id = params.get('id');
       // faites quelque chose avec l'identifiant ici
     });
+  }
+
+  
+
+  goToDetailTirage(id:number){
+    console.log(id);
+    return this.router.navigate(['/detailregion',id])
+   
   }
 
   Click():void{

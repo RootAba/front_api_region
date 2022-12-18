@@ -44,7 +44,7 @@ const routes: Routes = [
   },
 
   {
-    path:"detailregion",
+    path:"detailregion/:id",
     component:DetailregionComponent
   },
   {

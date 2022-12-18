@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 
 const API_URL = 'http://localhost:8080/regions/';
 const API_URl_SITE = 'http://localhost:8080/sitesite/';
+const API_URL_COMM = 'http://localhost:8080/commentaires/'
 @Injectable({
   providedIn: 'root'
 })
@@ -24,8 +25,37 @@ export class RegionService {
     return this.http.post(API_URL + 'creation',data )
   }
 
+
+  ajouterCommentaire(contenucom:any,user_id:any,idregion:any): Observable<any>{
+    
+    const data:FormData=new FormData();
+    let comm = [
+      {
+        "contenucom": contenucom,
+        "regions":{
+           "idregion":idregion
+        },
+        "user": {
+         
+          "id": user_id,
+      }
+    }
+    ];
+    //data.append('data',activite);
+    data.append('data', JSON.stringify(comm).slice(1,JSON.stringify(comm).lastIndexOf(']')));
+  
+    return this.http.post(API_URL_COMM+'ajoutcommentaire' ,data)
+  }
+
+
   siteTouristiqueParRegion(id:number):Observable <any>{
     const data:FormData=new FormData();
-    return this.http.get(API_URl_SITE + `affichersiteregion/${id}`)
+    return this.http.get(`http://localhost:8080/site/affichersiteregion/${id}`)
+  }
+
+
+  RegionParId(id:number):Observable <any>{
+    const data:FormData=new FormData();
+    return this.http.get(`http://localhost:8080/regions/regionparid/${id}`)
   }
 }
