@@ -60,3 +60,22 @@ width: 100%;
             font-size: 20px;
           }
 
+
+      
+          
+          /* LES POSTES OU COMMENTAIRES */
+          .poster{
+              border: 1px solid; 
+              margin: 2%;
+              padding: 2%;
+              display: flex;
+              flex-direction: row;
+              box-shadow: 5px 5px rgb(238, 234, 234);
+          }
+          .poster .users{
+              text-align: center;
+          }
+          .list-unstyled{
+              display: flex;
+              flex-direction: row;
+          }

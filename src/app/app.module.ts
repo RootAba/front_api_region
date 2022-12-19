@@ -14,6 +14,7 @@ import { httpInterceptorProviders } from './_helpers/http.interceptor';
 import { ProfilComponent } from './profil/profil.component';
 import { AjoutRegionComponent } from './ajout-region/ajout-region.component';
 import { RouterModule } from '@angular/router';
+import { EnteteComponent } from './entete/entete.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { RouterModule } from '@angular/router';
     RegistrationComponent,
     ProfilComponent,
     AjoutRegionComponent,
+    EnteteComponent,
     
   ],
   imports: [

@@ -58,4 +58,13 @@ export class RegionService {
     const data:FormData=new FormData();
     return this.http.get(`http://localhost:8080/regions/regionparid/${id}`)
   }
+
+
+  // Affihcer commentaire par region
+
+  CommentaireParRegion(id:number):Observable<any>{
+
+    const data:FormData = new FormData();
+    return this.http.get(`http://localhost:8080/commentaires/affichercommentaireRegion/${id}`)
+  }
 }

@@ -6,7 +6,8 @@ import{VisiteComponent} from './visite/visite.component';
 import{DetailregionComponent} from './detailregion/detailregion.component';
 import{LoginComponent} from './login/login.component';
 import{RegistrationComponent} from './registration/registration.component';
-import{AjoutRegionComponent} from './ajout-region/ajout-region.component'
+import{AjoutRegionComponent} from './ajout-region/ajout-region.component';
+import{EnteteComponent} from './entete/entete.component'
 
 const routes: Routes = [
 
@@ -42,7 +43,10 @@ const routes: Routes = [
     path:"visite",
     component:VisiteComponent
   },
-
+  {
+    path:"entete",
+    component:EnteteComponent
+  },
   {
     path:"detailregion/:id",
     component:DetailregionComponent

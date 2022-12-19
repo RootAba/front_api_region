@@ -1,11 +1,13 @@
 
-<div class="contain" *ngFor= "let region of regioncontenu ">
-  <img src={{region.image}}  alt="Snow" style="width:100%; height: 700px;">
+
+<app-entete></app-entete>
+<div class="contain" >
+  <img src={{regioncontenu.image}}  alt="Snow" style="width:100%; height: 700px;">
  
-  <div class="centered"> <h1>{{region.nomRegion}} </h1>
-     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-    has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-     took a galley of type and scrambled it to make a type specimen book. It has survived not    </div>
+  <div class="centered"> <h1>{{regioncontenu.nomRegion}} </h1>
+    <h2>Superficie : {{regioncontenu.superficie}} </h2>
+    <h2>Langue : {{regioncontenu.langue}} </h2>
+       </div>
 </div>
 
 <!--Nous avons la possibilite de recuperer l'image de la region avec site.region.image -->
@@ -34,6 +36,23 @@
             has been </p>
         </div-->
 </div>
+
+
+<div class="lesCommentaires col-md-12" *ngIf="nombrecom != 0">
+  <div class="poster" *ngFor="let Commentaires of commentaie" >
+      <div class="users col-md-3">
+          <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="avatar" width="50px" height="50px">
+          <h3>{{Commentaires.user.username}}</h3>
+      </div>
+      <div>
+        
+          <p>{{Commentaires.contenucom}}</p>
+      </div>
+
+  </div>
+  
+</div><div class="col-md-6" style="text-align: center;" *ngIf="nombrecom == 0"><h5>Pas de commentaire</h5></div>
+
 <!-- Formulaire d'ajout de commentaire -->
 <form>
   <div class="form-group">

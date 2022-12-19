@@ -1,31 +1,80 @@
-<div class="contactez-nous">
-  <h1>Contactez-nous</h1>
-  <p>Un problème, une question, envie de nous envoyer un message d’amour ? N’hésitez pas à utiliser ce formulaire pour prendre contact avec nous !</p>
-  <form action="/page-traitement-donnees" method="post">
-  <div>
-  <label for="nom">Votre nom</label>
-  <input type="text" id="nom" name="nom" placeholder="Martin" required>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ajouter une region</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form  action="" enctype="multipart/form-data"> 
+            <!-- (ngSubmit)="submitRegion()" -->
+          <!-- <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Nom:</label>
+            <input type="text" class="form-contro myInput" id="recipient-name">
+          </div> -->
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Nom:</label>
+            <input type="text" class="form-control myInput" id="recipient-name"  >
+          </div>
+
+          <!-- <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Nombre d'habitants:</label>
+            <input type="text" class="form-control myInput" id="recipient-name"  formControlName="">
+          </div> -->
+
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Code region:</label>
+            <input type="text" class="form-control myInput" id="recipient-name" >
+          </div>
+
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Domaine activité:</label>
+            <input type="text" class="form-control myInput" id="recipient-name"  >
+          </div>
+
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Superficie:</label>
+            <input type="text" class="form-control myInput" id="recipient-name" >
+          </div>
+
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Annee:</label>
+            <input type="text" class="form-control myInput" id="recipient-name"  >
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Nombre de population: </label>
+            <input type="text" class="form-control myInput" id="recipient-name"  >
+          </div>
+
+          <!-- <div  class="form-group">
+            <select id="annee" formControlName="typeAct" class="form-select form-control inputvalue"
+              [(ngModel)]="">
+              <option selected disabled></option>
+              <option *ngFor="let typeActivite of typeActivites$" [(ngValue)]="typeActivite.typeActivite">
+                {{typeActivite.typeActivite}}</option>
+            </select>
+            <label for="activity">Type activité<span style="color: red;">*</span></label>
+          </div> -->
+
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Images:</label>
+           <input type="file"  id="files" name="files" multiple class="form-control myInput" 
+           >    <!-- " -->
+          </div>
+
+          <div class="form-group">
+            <label for="message-text" class="col-form-label myInput">Description:</label>
+            <textarea class="form-control myInput" id="message-text"></textarea >
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" (onclick)="submitRegion()"  class="btn btn-danger" data-dismiss="modal">Annuler</button> -->
+        <button type="button"  class="btn btn-success">Envoyer</button>
+      </div>
+    </div>
   </div>
-  <div>
-  <label for="email">Votre e-mail</label>
-  <input type="email" id="email" name="email" placeholder="monadresse@mail.com" required>
-  </div>
-  <div>
-  <label for="sujet">Quel est le sujet de votre message ?</label>
-  <select name="sujet" id="sujet" required>
-  <option value="" disabled selected hidden>Choisissez le sujet de votre message</option>
-  <option value="probleme-compte">Problème avec mon compte</option>
-  <option value="question-produit">Question à propos d’un produit</option>
-  <option value="suivi-commande">Suivi de ma commande</option>
-  <option value="autre">Autre...</option>
-  </select>
-  </div>
-  <div>
-  <label for="message">Votre message</label>
-  <textarea id="message" name="message" placeholder="Bonjour, je vous contacte car...." required></textarea>
-  </div>
-  <div>
-  <button type="submit">Envoyer mon message</button>
-  </div>
-  </form>
-  </div>
+</div>

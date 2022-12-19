@@ -1,0 +1,33 @@
+<div class="navbar">
+ 
+  <!-- Navbar logo -->
+  <div class="nav-header">
+    <div class="nav-logo">
+      <a href="#"><p>Mali Tourism</p>
+        <!--img src="logo.png" width="100px" alt="logo"-->
+      </a>
+    </div>
+  </div>
+   
+  <!-- responsive navbar toggle button -->
+  <input type="checkbox" id="nav-check">
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+ 
+  <!-- Navbar items -->
+  <div class="nav-links">
+    <a routerLink="/acceuil" routerLinkActive="active">Accueil</a>
+    <a routerLink="/visite" routerLinkActive="active">Visites</a>
+    <a routerLink="/region" routerLinkActive="active">Regions</a>
+    <a routerLink="/ajoutregion" routerLinkActive="active" >Ajouter</a>
+    
+  <!--*ngIf="showAdminBoard"-->
+  </div>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" href="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
+ 
+</div>
