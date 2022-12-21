@@ -9,62 +9,108 @@ const API_URL_COMM = 'http://localhost:8080/commentaires/'
   providedIn: 'root'
 })
 export class RegionService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   afficherRegion(): Observable<any> {
-    const data:FormData=new FormData();
+    const data: FormData = new FormData();
     return this.http.get(API_URL + 'afficher');
   }
 
-  ajouterRegion(file:any,activite:any): Observable<any>{
-    const data:FormData=new FormData();
-    data.append('file',file);
+  ajouterRegion(file: any, activite: any): Observable<any> {
+    const data: FormData = new FormData();
+    data.append('file', file);
     //data.append('data',activite);
     console.log(activite)
-    data.append('data', JSON.stringify(activite).slice(1,JSON.stringify(activite).lastIndexOf(']')));
-    return this.http.post(API_URL + 'creation',data )
+    data.append('data', JSON.stringify(activite).slice(1, JSON.stringify(activite).lastIndexOf(']')));
+    return this.http.post(API_URL + 'creation', data)
   }
 
 
-  ajouterCommentaire(contenucom:any,user_id:any,idregion:any): Observable<any>{
-    
-    const data:FormData=new FormData();
+  ajouterCommentaire(contenucom: any, user_id: any, idregion: any): Observable<any> {
+
+    const data: FormData = new FormData();
     let comm = [
       {
         "contenucom": contenucom,
-        "regions":{
-           "idregion":idregion
+        "regions": {
+          "idregion": idregion
         },
         "user": {
-         
+
           "id": user_id,
+        }
       }
-    }
     ];
     //data.append('data',activite);
-    data.append('data', JSON.stringify(comm).slice(1,JSON.stringify(comm).lastIndexOf(']')));
-  
-    return this.http.post(API_URL_COMM+'ajoutcommentaire' ,data)
+    data.append('data', JSON.stringify(comm).slice(1, JSON.stringify(comm).lastIndexOf(']')));
+
+    return this.http.post(API_URL_COMM + 'ajoutcommentaire', data)
+  }
+
+  ajoutRegion(file: any, coderegion: any, nomRegion: any, domaine: any, langue: any, chiffrePop: any, idPays: any, annee: any, superficie: any): Observable<any> {
+
+    const data: FormData = new FormData();
+    let region = [{
+      "coderegions": coderegion,
+      "domaine": domaine,
+      "langue": langue,
+      "nomRegion": nomRegion,
+      "superficifie": superficie,
+      "pays": {
+        "idPays": idPays,
+      },
+      "population": {
+        "idPop": 3,
+        "annee": annee,
+        "chiffrePop": chiffrePop,
+      },
+
+    }
+    ]
+
+    let don = [
+      {
+        "coderegions": coderegion,
+        "domaine": domaine,
+        "langue": langue,
+        "nomRegion": nomRegion,
+        "pays": {
+          "idPays": idPays
+        },
+        "population": {
+          "annee": annee,
+          "chiffrePop": chiffrePop,
+          "idPop": 3
+        },
+        "superficie": superficie
+      }
+    ]
+
+
+    data.append('data', JSON.stringify(don).slice(1, JSON.stringify(don).lastIndexOf(']')));
+    data.append('file', file);
+
+    return this.http.post(`http://localhost:8080/regions/creation`, data)
   }
 
 
-  siteTouristiqueParRegion(id:number):Observable <any>{
-    const data:FormData=new FormData();
+  siteTouristiqueParRegion(id: number): Observable<any> {
+    const data: FormData = new FormData();
     return this.http.get(`http://localhost:8080/site/affichersiteregion/${id}`)
   }
 
 
-  RegionParId(id:number):Observable <any>{
-    const data:FormData=new FormData();
+  RegionParId(id: number): Observable<any> {
+    const data: FormData = new FormData();
     return this.http.get(`http://localhost:8080/regions/regionparid/${id}`)
   }
 
 
   // Affihcer commentaire par region
 
-  CommentaireParRegion(id:number):Observable<any>{
+  CommentaireParRegion(id: number): Observable<any> {
 
-    const data:FormData = new FormData();
+    const data: FormData = new FormData();
     return this.http.get(`http://localhost:8080/commentaires/affichercommentaireRegion/${id}`)
   }
 }

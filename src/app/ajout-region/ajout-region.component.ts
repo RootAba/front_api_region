@@ -16,7 +16,11 @@ export class AjoutRegionComponent {
   superficie:any;
   langue:any;
   domaine:any;
-  image:any;
+  idPays=1;
+  chiffrePop:any;
+  annee:any;
+  file:any;
+ 
 
   constructor(private route:ActivatedRoute,private router: Router,private regionService:RegionService) {
   }
@@ -29,5 +33,20 @@ export class AjoutRegionComponent {
     });*/
    
   }
+  envoyerImage(event:any){
+    this.file = event.target["files"][0];
+    console.log(this.file);
+  }
+  onSubmit():void{
+    this.regionService.ajoutRegion(this.file,this.coderegions,this.nomRegion,this.domaine,this.langue,this.chiffrePop,this.idPays, this.annee,this.superficie).subscribe(data=>{
+     console.log("nom region : "+this.nomRegion)
+      console.log(data);
+ });
 
+ //this.reloadPage();
+  }
+
+  reloadPage(): void {
+    window.location.reload();
+  }
 }

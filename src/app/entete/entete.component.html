@@ -24,10 +24,22 @@
     <a routerLink="/acceuil" routerLinkActive="active">Accueil</a>
     <a routerLink="/visite" routerLinkActive="active">Visites</a>
     <a routerLink="/region" routerLinkActive="active">Regions</a>
-    <a routerLink="/ajoutregion" routerLinkActive="active" >Ajouter</a>
-    
+    <a routerLink="/ajoutregion" routerLinkActive="active" *ngIf="showAdminBoard" >Ajouter  </a>
+
+  
+
   <!--*ngIf="showAdminBoard"-->
   </div>
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" href="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
+ 
  
 </div>
+<style>
+ul li{
+visibility: hidden;
+}
+a :hover ul li{
+  visibility: visible;
+  display: block;
+  float: left;
+}
+</style>

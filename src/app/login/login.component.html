@@ -2,11 +2,7 @@
 
 <div class="col-md-12">
 	<div class="card card-container">
-	  <img
-		id="profile-img"
-		src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-		class="profile-img-card"
-	  />
+	
 	  <form
 		*ngIf="!isLoggedIn"
 		name="form"
@@ -36,7 +32,7 @@
 			class="form-control"
 			name="password"
 			[(ngModel)]="form.password"
-			required
+			required	
 			minlength="6"
 			#password="ngModel"
 			[ngClass]="{ 'is-invalid': f.submitted && password.errors }"

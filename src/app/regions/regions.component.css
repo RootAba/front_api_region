@@ -75,6 +75,12 @@ background-color: rgb(227, 112, 30);
       
       
       }
+      .box .btn {
+        margin-top: 20px;
+        margin-left: 60px;
+        background-color:#5d5c04;
+     
+      }
       .box input{
         display: inline-block;
         

@@ -1,80 +1,54 @@
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Ajouter une region</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form  action="" enctype="multipart/form-data"> 
-            <!-- (ngSubmit)="submitRegion()" -->
-          <!-- <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Nom:</label>
-            <input type="text" class="form-contro myInput" id="recipient-name">
-          </div> -->
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Nom:</label>
-            <input type="text" class="form-control myInput" id="recipient-name"  >
-          </div>
 
-          <!-- <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Nombre d'habitants:</label>
-            <input type="text" class="form-control myInput" id="recipient-name"  formControlName="">
-          </div> -->
 
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Code region:</label>
-            <input type="text" class="form-control myInput" id="recipient-name" >
-          </div>
+<form>
+<div class=" haut">
 
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Domaine activité:</label>
-            <input type="text" class="form-control myInput" id="recipient-name"  >
-          </div>
-
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Superficie:</label>
-            <input type="text" class="form-control myInput" id="recipient-name" >
-          </div>
-
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Annee:</label>
-            <input type="text" class="form-control myInput" id="recipient-name"  >
-          </div>
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Nombre de population: </label>
-            <input type="text" class="form-control myInput" id="recipient-name"  >
-          </div>
-
-          <!-- <div  class="form-group">
-            <select id="annee" formControlName="typeAct" class="form-select form-control inputvalue"
-              [(ngModel)]="">
-              <option selected disabled></option>
-              <option *ngFor="let typeActivite of typeActivites$" [(ngValue)]="typeActivite.typeActivite">
-                {{typeActivite.typeActivite}}</option>
-            </select>
-            <label for="activity">Type activité<span style="color: red;">*</span></label>
-          </div> -->
-
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Images:</label>
-           <input type="file"  id="files" name="files" multiple class="form-control myInput" 
-           >    <!-- " -->
-          </div>
-
-          <div class="form-group">
-            <label for="message-text" class="col-form-label myInput">Description:</label>
-            <textarea class="form-control myInput" id="message-text"></textarea >
-          </div>
-
-        </form>
-      </div>
-      <div class="modal-footer">
-        <!-- <button type="button" (onclick)="submitRegion()"  class="btn btn-danger" data-dismiss="modal">Annuler</button> -->
-        <button type="button"  class="btn btn-success">Envoyer</button>
-      </div>
-    </div>
+  <div>
+    <label for="name">Code Region</label>
+    <input type="text" name="coderegions" [(ngModel)]="coderegions" >
   </div>
+  <div>
+    <label for="name">Nom Region</label>
+    <input type="text" name="nomRegion" [(ngModel)]="nomRegion">
+  </div>
+
+  <div>
+    <label for="name">Domaine</label>
+    <input type="text" name="domaine" [(ngModel)]="domaine" >
+  </div>
+
+  <div>
+    <label for="name">Langue</label>
+    <input type="text" name="langue" [(ngModel)]="langue" >
+  </div>
+  <div>
+    <label for="name">Population</label>
+    <input type="text" name="chiffrePop" [(ngModel)]="chiffrePop">
+  </div>
+
+  <div>
+    <label for="name">Superficie</label>
+    <input type="text" name="superficie" [(ngModel)]="superficie" >
+  </div>
+
+  <div>
+    <label for="name">année</label>
+    <input type="text" name="annee" [(ngModel)]="annee">
+  </div>
+
+  <div>
+    <label for="name">Image</label>
+    <input type="file" (change)="envoyerImage($event)" >
+  </div>
+  <button type="submit" (click)="onSubmit()">envoyer</button>
 </div>
+</form>
+
+<style>
+.haut{
+  padding-right: 10%;
+  padding-left: 10%;
+}
+  
+  
+</style>
